@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                     http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">  
+        
+    <bean id="c-obj" class="com.spring.practice.XMLConfig.Autowire.C">
+    	<constructor-arg index="0" value="ABC"/>
+    </bean>
+    
+    <bean id="bb" class="com.spring.practice.XMLConfig.Autowire.B" autowire="byType">
+     	<property name="B" value="4321"/>
+     	<!-- c-obj will get autowired byType (Class name) -->
+     	<constructor-arg index="0" value="ABCD"/>
+    </bean>
+    
+    <bean id="a-obj" class="com.spring.practice.XMLConfig.Autowire.A" autowire="byName">
+		<property name="A" value="1234"/>
+		<!-- bb will get autowired byName (id="b") in class A -->
+    </bean>
+</beans>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                     http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">  
+        
+    <bean id="c-obj" class="com.spring.practice.XMLConfig.C">
+    	<constructor-arg index="0" value="ABC"/>
+    </bean>
+    
+    <bean id="b-obj" class="com.spring.practice.XMLConfig.B">
+     	<property name="B" value="4321"/>
+     	<property name="C" ref="c-obj"/> 
+     	<constructor-arg index="0" value="ABCD"/>    	
+    </bean>      
+    
+    <bean id="a-obj" class="com.spring.practice.XMLConfig.A">
+		<property name="A" value="1234"/>
+		<property name="B" ref="b-obj"/>		   
+    </bean>
+</beans>
