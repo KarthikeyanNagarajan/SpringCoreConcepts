@@ -1,6 +1,3 @@
-# SpringCoreConcepts
-XML and Annotation Based Spring Core Concept codes.
-
 This Project contains following concepts,
 
 1. XML based Spring configuration.
