@@ -16,6 +16,6 @@
     
     <bean id="a-obj" class="com.spring.practice.XMLConfig.Autowire.A" autowire="byName">
 		<property name="A" value="1234"/>
-		<!-- bb will get autowired byName (id="b") in class A -->
+		<!-- bb in class A will get autowired byName of the bean (id="bb") -->
     </bean>
 </beans>
